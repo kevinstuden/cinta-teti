@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient to-b from-[blue]-50 via-[white] to-[blue]-100 flex flex-col items-center justify-center text-center px-4 animate-fadeIn z-10">
+    <main className="min-h-screen bg-gradient-to-b from-blue-500 via-white to-blue-700 flex flex-col items-center justify-center text-center animate-FadeIn px-4 z-10">
       {/* Header */}
       <h1 className="text-5xl font-bold text-secondary mb-4">
         Welcome to <span className="text-primary">My Portfolio</span>
@@ -11,7 +11,7 @@ export default function Home() {
 <img
   src="/profile.png"
   alt="Profile"
-  width={160}  // same as 40 * 4
+  width={160}  
   height={160}
   className="rounded-full object-cover border-4 border-primary shadow-lg"
 />
@@ -31,32 +31,16 @@ export default function Home() {
       {/* Links */}
       <div className="flex gap-6 text-lg">
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/kevin-kurniawan-cahyadi-04ab52380"
           className="text-primary font-medium hover:text-accent transition"
         >
           LinkedIn
         </a>
         <a
-          href="https://github.com"
+          href="https://github.com/kevinstuden"
           className="text-primary font-medium hover:text-accent transition"
         >
           GitHub
-        </a>
-      </div>
-
-      {/* Navigation */}
-      <div className="mt-10 flex gap-6 text-xl font-semibold">
-        <a
-          href="/academic"
-          className="px-6 py-3 bg-primary text-white rounded-xl hover:bg-accent transition shadow-md"
-        >
-          🎓 Academic
-        </a>
-        <a
-          href="/activities"
-          className="px-6 py-3 bg-secondary text-white rounded-xl hover:bg-accent transition shadow-md"
-        >
-          ⚙️ Activities
         </a>
       </div>
     </main>
