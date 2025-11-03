@@ -8,18 +8,18 @@ export default function Home() {
       <hr className="border-2 border-primary w-1/3 mb-8" />
 
       {/* Profile Picture */}
-<img
-  src="/profile.png"
-  alt="Profile"
-  width={160}  
-  height={160}
-  className="rounded-full object-cover border-4 border-primary shadow-lg"
-/>
-
+      <img
+        src="/profile.png"
+        alt="Profile"
+        width={160}
+        height={160}
+        className="rounded-full object-cover border-4 border-primary shadow-lg"
+      />
 
       {/* Introduction */}
       <h2 className="text-2xl font-semibold text-secondary mb-2">
-        Hello, I&apos;m <span className="text-primary">Kevin Kurniawan Cahyadi</span>
+        Hello, I&apos;m{" "}
+        <span className="text-primary">Kevin Kurniawan Cahyadi</span>
       </h2>
       <p className="text-gray-700 max-w-2xl mb-6">
         I&apos;m a passionate Biomedical Engineering student at Gadjah Mada

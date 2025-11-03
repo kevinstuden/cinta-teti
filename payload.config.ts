@@ -1,5 +1,5 @@
 import { postgresAdapter } from "@payloadcms/db-postgres";
-import { s3Storage } from '@payloadcms/storage-s3'
+import { s3Storage } from "@payloadcms/storage-s3";
 import sharp from "sharp";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { buildConfig } from "payload";
@@ -20,20 +20,20 @@ export default buildConfig({
   db: postgresAdapter({
     pool: {
       connectionString: process.env.DATABASE_URL,
-       ssl: {
+      ssl: {
         rejectUnauthorized: true,
         ca: process.env.SSL_CA,
       },
     },
   }),
-   plugins: [
-     s3Storage({
-       collections: {
+  plugins: [
+    s3Storage({
+      collections: {
         media: {
-          prefix: 'custom-prefix',
+          prefix: "custom-prefix",
           signedDownloads: {
             shouldUseSignedURL: ({ collection, filename, req }) => {
-              return filename.endsWith('.mp4')
+              return filename.endsWith(".mp4");
             },
           },
         },
@@ -46,7 +46,7 @@ export default buildConfig({
         },
         region: process.env.S3_REGION,
         // Opsi ini penting agar URL yang dihasilkan oleh Payload benar
-        forcePathStyle: true, 
+        forcePathStyle: true,
       },
       bucket: process.env.S3_BUCKET,
     }),
@@ -57,4 +57,3 @@ export default buildConfig({
   // you don't need it!
   sharp,
 });
-
